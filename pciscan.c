@@ -115,8 +115,8 @@ UefiMain (
   //SCAN_ESC!=Key.ScanCode
  while (1)
     {
-		Status= gST -> ConIn -> ReadKeyStroke(gST->ConIn,&Key);	
-		if (Status == EFI_SUCCESS)	{
+	Status= gST -> ConIn -> ReadKeyStroke(gST->ConIn,&Key);	
+	if (Status == EFI_SUCCESS)	{
       gST -> ConOut -> SetCursorPosition(gST -> ConOut,LINEX,LINEX+current);      
       Print(L"%S",ITEM[current]);
 			if (SCAN_UP == Key.ScanCode) {
